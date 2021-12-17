@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+#wrap{min-width:320px;max-width: 480px; margin: 0 auto;}
+/* ========== header ========== */
+header{width: 100%; height: 60px; 
+position: fixed; top:0; left: center; z-index: 999;
+background-color: #fff; max-width: 480px;}
+header h1{margin: 0 auto; width: 152px; height: 60px;
+-webkit-animation:flip-in-hor-bottom .5s cubic-bezier(.47,0.000,.745,.715) .3s both;
+animation:flip-in-hor-bottom .5s cubic-bezier(.47,0.000,.745,.715) .3s both}
+header h1 a{display: block; height: 100%;
+background: url(../img/logo.png) no-repeat center 20px / auto 22px;}
+header button{width: 43px; height: 60px;
+position: absolute; top: 4px;
+background-image: url(../img/icon_top.png);
+background-repeat: no-repeat; background-size: 43px auto;
+cursor: pointer;}
+header button.open{left: 12px; background-position: 0 -60px;}
+header button.use{left: 52px; background-position: 0 -120px;}
+header button.search{right: 12px; background-position: 0 0;}
+header nav{background-color: #fff;}
+header .gnb{white-space: nowrap; overflow-x: scroll;}
+.gnb li{display: inline-block; width: 22%; text-align: center;}
+.gnb li a{display: block; padding: 20px 0 16px; position: relative;}
+.gnb li.on a{color: #3478f7; font-weight: bold;}
+
+/* 스크롤바 */
+header .gnb{overflow: auto;}
+header .gnb::-webkit-scrollbar {width: 10px; height: 10px;}
+header .gnb::-webkit-scrollbar-thumb {
+  background-color: #B0B0B0;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+header .gnb::-webkit-scrollbar-track {
+  background-color: #E0E0E0;
+  border-radius: 10px;
+}
+
+
+
+/* header .gnb::-webkit-scrollbar{width: 2px}
+header .gnb::-webkit-scrollbar-thumb{height: 2px; background-color: rgba(0,0,0,0.2); border-radius: 10px;} */
+
+
+/* body::-webkit-scrollbar{width: 1px !important;}
+body::-webkit-scrollbar-thumb{height: 1px !important; background-color: rgba(0,0,0,1); border-radius: 10px;} */
+
+.sect01 .more{margin-top: 130px;}
+/* ========== #container ========== */
+#container{width: 100%;}
+.sect01{margin-top: 110px;}
+#container .more{display: block; padding: 0 0 0 35px;
+background-color: #3478f7}
+#container .more a{display: block; width: 120px; padding: 15px 0; color: #fff; font-size: 16px; font-weight: normal;}
+#container .more a::after{display: inline-block; content: '';
+width: 5px; height: 17px; margin-left: 7px;
+background:url(../img/more.png) no-repeat 0 6px / 5px auto;}
+
+.sect01 ul{padding: 15px 15px 5px;}
+.sect01 ul li{float: left; width: calc((100% - 24px) / 3); margin-right:12px; line-height: 1.4;}
+.sect01 img{width: 100%; margin-bottom: 10px;}
+.sect01 ul li:nth-child(3n){margin-right:0;}
+.sect01 ul li p{white-space: nowrap; word-break: break-all; text-overflow: ellipsis; overflow: hidden;}
+.sect01 ul li .sect1_name{color: #434343; font-size: 16px; margin-bottom: 8px; letter-spacing: -1px;}
+.sect01 ul li .sect1_singer{color: #959595; font-size: 12px; margin-bottom: 12px;}
+.sect01 ul li .sect1_date{color: #959595; font-size: 12px; margin-bottom: 38px;}
+
+.sect02 ul{padding: 15px 15px 5px;}
+.sect02 ul li{width: 100%; margin-bottom: 21px; position: relative;}
+.sect02 ul li .rank{display: block; line-height: 1; color: #434343; 
+position: absolute; top: 50%; transform: translateY(-50%);}
+.sect02 ul li img{display: inline-block; width: 15%; margin-left: 30px;}
+.sect02 ul li div{display: inline-block; margin: 6px 0 0 12px;
+white-space: nowrap; word-break: break-all; text-overflow: ellipsis; overflow: hidden;}
+.sect02 ul li .sect2_name{font-size: 14px; margin-bottom: 7px; color: #434343;}
+.sect02 ul li .sect2_singer{font-size: 12px; color: #959595; width: 110px;}
+.sect02 ul li button{float: right;
+width: 37px; height: 50px; cursor: pointer;
+background:url(../img/play.png) no-repeat 10px 15px / 15px auto;}
+
+.sect03 ul{padding: 15px 15px 28px 15px; border-bottom: 1px solid #c5c5c5;}
+.sect03 ul li{width: calc((100% - 10px) / 2); height: auto; float: left;}
+.sect03 ul li iframe{margin-bottom: 10px;}
+.sect03 ul li:nth-child(2n-1){margin-right: 10px;}
+.sect03 ul li p{white-space: nowrap; word-break: break-all; text-overflow: ellipsis; overflow: hidden;}
+.sect03 ul li .sect3_name{font-size: 14px; color: #434343; margin-bottom: 10px;}
+.sect03 ul li .sect3_singer{font-size: 12px; color: #959595; margin-bottom: 13px; }
+
+/* ========== footer ========== */
+footer{width: 100%; background-color: #eee; text-align: center;
+padding: 19px 15px 15px; position: relative; font-size: 12px;}
+footer .login{width: 150px; height:36px; line-height: 1; padding-top: 11px;
+font-size: 13px; border-radius: 18px; background-color:#2f6adb; color:#fff;
+position:absolute; left: 50%; transform: translateX(-50%);}
+footer .go_top{width: 36px; height: 36px; line-height: 1; padding-top: 7px;
+border-radius: 50px; background-color:#2f6adb; color:#fff;
+position:absolute; right: 15px;}
+footer .go_top::before{content: ''; display:block; margin-left: 13px;
+width: 11px; height: 6px; background: url(../img/go_top.png) no-repeat 0 0 / 10px auto;}
+footer .info{margin-top: 74px; color: #959595; }
+footer .info a::after{width: 1px; height: 12px; margin: 0 7px;
+content: ''; display: inline-block; background-color: #959595;}
+footer .info a:last-child::after{display: none;}
+footer button{margin-top: 20px; font-size: 12px; color: #777; cursor: pointer;}
+footer button::after{width: 22px; height: 9px;
+  content: ''; display: inline-block; margin-left: 6px;
+  background: url(../img/f_more.png) no-repeat 0 2px / 10px auto;}
+footer p{color: #959595; margin-top: 20px;}
